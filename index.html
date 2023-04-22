@@ -1,0 +1,141 @@
+
+<!-- AUTHOR: ABHISHEK_SUTAR -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Student Registration Form</title>
+  </head>
+  <style>
+body{
+    background-image: url("bgimg.jpeg");
+}
+</style>
+  
+</style>
+  <body>
+    <br />
+    <br />
+    
+    <div class="container">
+      <div class="signup-box">
+        <h1 class="h1">Enrollment Form</h1>
+        <form id="enrollmentForm">
+          <div class="input-group">
+            <label for="name">Name :</label>
+                    <input type="text" class="ele" id="name"value="" required autofocus placeholder="Enter Your Name...">
+                    
+          </div>
+          <br />
+          <div class="input-group">
+            <label for="email">Email :</label>
+            <input type="email" class=" ele" id="email" value="" required placeholder="youremail@email.com"> 
+          </div>
+          <br/>
+          <div class="input-group">
+              <label for="age">Age : </label>
+              <input type="number" class=" elem" id="age" value="" required>
+                    
+                </div>
+          <br />
+          <div class="input-select">
+                    <label for="gender" > Gender : </label>
+                    <input type="radio" id="male" value="Male" name="gender"><label for="male">Male</label>
+                    <input type="radio" id="female" value="Female" name="gender"><label for="female">Female</label>
+                    <input type="radio" id="Other" value="Other" name="gender"><label for="Other">Other</label>
+          </div>
+          <br />
+          <label> phone : </label>
+          <input type="text" name="country code" class="elem" value="+91" disabled size="2"/>
+          <input type="text" name="phone" class=" elek" size="10" id="phone" value=""/> <br />
+          <br />
+            <label> Photo : </label>
+           <input type="file" name="" id="img">
+          <br/>
+          <br/>
+          <div class="input-group">
+            <label for="addr">Address :</label>
+            <input type="text" class=" elek" value="" placeholder="address" id="addr" required>         
+          </div>
+          <br/>
+          <div class="input-select">
+                    <label for="skills" class="Label">Skills</label><br>
+                    <input type="checkbox" name="skills" id="programming" value="Programming" > <label for="programming">Programming</label>
+                    <input type="checkbox" name="skills" id="Problem" value="Problem-solving " ><label for="Problem">Problem-solving</label>
+                    <input type="checkbox" name="skills" id="marketing" value="Marketing" ><label for="marketing">Marketing</label>
+                    <input type="checkbox" name="skills" id="communication" value="Communication" ><label for="communication">Communication</label>
+                    <input type="checkbox" name="skills" id="Analytical" value="Analytical " ><label for="Analytical">Analytical</label>
+                  </div>
+          <br />
+          <p></p>
+          <div class="buttons">
+                    <input type="submit" value="Submit" class="clkbtn">
+                    <button type="reset" id="clear-btn"class="clkbtn">CLEAR</button>
+          </div>
+        </form>
+      </div>
+      <div class="midline"></div>
+      <div class="box2">
+        <h1 class="table-head">Enrolled Student</h1>
+        <div class="userdetails"> 
+          <table class="usertable" id="table">
+
+            <thead>
+
+              <th>Description</th>
+              <th>Image</th>
+            </thead>
+          <tbody id="tbd">    
+            
+          </tbody>
+          </table> 
+        </div>
+      </div>
+    </div>
+    <script >
+
+document
+  .getElementById("enrollmentForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+    var firstName = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var phone = document.getElementById("phone").value;
+    var addr = document.getElementById("addr").value;
+    var age = document.getElementById("age").value;
+    var profile = document.getElementById("profile");
+    const fileInput = document.getElementById('img');
+    const selectedFile = fileInput.files[0]
+    console.log(selectedFile)
+    let url = window.URL.createObjectURL(selectedFile);
+    // var tbd = document.getElementById('tbd')
+    const radioButtons = document.querySelectorAll('input[name="gender"]');
+    let selectedButton;
+    for (const radioButton of radioButtons) {
+        if (radioButton.checked) {
+            selectedButton = radioButton.value;
+            break;
+        }
+    }
+    const checkBox = document.querySelectorAll('input[name="skills"]');
+    let selectedCheck=[];
+    for (const checkBo of checkBox) {
+        if (checkBo.checked) {
+
+            selectedCheck = [...selectedCheck,checkBo.value];
+            // break;
+        }
+    }
+    
+    var tableRow = document.getElementById("table");
+    var row = tableRow.insertRow(-1);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    cell1.innerHTML = "<div class=\"user\"><h1>"+firstName+"</h1><h3>"+email+"</h3><h4>"+selectedButton +" "+age+"</h4><h4>"+"+91-"+phone+"</h4><p>"+addr+"</br>"+selectedCheck.join(' | ')+" </p></div>";
+    cell2.innerHTML = "<div class=\"userprofile\"><img src=\""+url+"\" alt=\"\" id=\"profile\" ></div>";
+  });</script>
+  </body>
+</html>

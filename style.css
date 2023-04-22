@@ -1,0 +1,527 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  background-color: rgb(231, 231, 231);
+}
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.heading {
+  color: green;
+}
+
+.title {
+  font-weight: 400;
+  letter-spacing: 1.5px;
+}
+
+.container {
+  height: 850px;
+  width: 100%;
+  background-color: white;
+  box-shadow: 8px 8px 20px rgb(128, 128, 128);
+  position: relative;
+  /* border: 1px solid red; */
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+
+.input-form {
+  width: 40%;
+  height: auto;
+  text-align: center;
+}
+
+.input-form form {
+  width: 100%;
+  border: 1px solid white;
+  border-radius: 20px;
+  margin: 10px 20px;
+  padding: 20px;
+  text-align: start;
+}
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 2px;
+  accent-color: rgb(3, 56, 100);
+}
+.table {
+  width: 50%;
+  height: auto;
+  text-align: center;
+  padding: 10px 20px;
+  overflow: auto;
+}
+
+.table-head {
+  padding: 30px;
+}
+
+.table {
+  width: 50%;
+  height: auto;
+  text-align: center;
+  padding: 10px 20px;
+  overflow: auto;
+}
+
+.scroll {
+  overflow-y: auto;
+}
+
+.scroll::-webkit-scrollbar {
+  width: 100%;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  background: transparent;
+  border: 1px solid rgb(147, 145, 145);
+  border-radius: 8px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 10px auto;
+}
+
+th,
+td {
+  padding: 10px 20px;
+  border-bottom: 1.6px solid rgb(220, 22, 22);
+}
+
+th {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+td {
+  font-size: 16px;
+}
+
+tr:hover {
+  background: white;
+}
+
+p {
+  font-size: 18px;
+  letter-spacing: 1.2px;
+  line-height: 1.6rem;
+}
+
+.btn {
+  height: 60px;
+  width: 300px;
+  margin: 20px auto;
+  box-shadow: 10px 10px 30px rgb(254, 215, 188);
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.login,
+.signup {
+  font-size: 22px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  position: relative;
+  cursor: pointer;
+}
+
+.slider {
+  height: 60px;
+  width: 150px;
+  border-radius: 50px;
+  background-image: linear-gradient(
+    to right,
+    rgb(255, 195, 110),
+    rgb(255, 146, 91)
+  );
+  position: absolute;
+  top: 20px;
+  left: 100px;
+  transition: all 0.5s ease-in-out;
+}
+
+.form-section {
+  height: 500px;
+  width: 1000px;
+  padding: 20px 0;
+  display: flex;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+  left: 0px;
+}
+
+.form-section-move {
+  left: -500px;
+}
+
+.signup-box {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  /* border: 1px solid rgb(0, 26, 255); */
+  /* border-right: 1px solid gray; */
+}
+
+.signup-box {
+  gap: 30px;
+}
+.midline {
+  height: 90%;
+  border-left: 1px solid rgb(252, 2, 2);
+  align-self: self-end;
+}
+
+.ele {
+  width: 400px;
+  outline: none;
+  /* border: none; */
+  border-color: rgb(224, 224, 224);
+  border-width: 2px;
+  color: rgb(77, 77, 77);
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 13px;
+}
+.elek {
+  height: 40px;
+  width: 330px;
+  outline: none;
+  /* border: none; */
+  border-color: rgb(224, 224, 224);
+  border-width: 2px;
+  color: rgb(77, 77, 77);
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 13px;
+}
+.elem {
+  height: 40px;
+  width: 55px;
+  outline: none;
+  border-color: rgb(224, 224, 224);
+  border-width: 2px;
+  /* border: none; */
+  color: rgb(77, 77, 77);
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  border-radius: 5px;
+  /* padding: 15px; */
+  font-size: 13px;
+}
+.elemj {
+  height: 150px;
+  width: 455px;
+  outline: none;
+  /* border: none; */
+  border-color: rgb(224, 224, 224);
+  border-width: 2px;
+  color: rgb(77, 77, 77);
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 13px;
+}
+.elemj:focus {
+  border: none;
+}
+.clkbtn {
+  border-radius: 5px;
+  /* background-image: linear-gradient(
+    to right,
+    rgb(255, 192, 110),
+    rgb(91, 244, 255)
+  ); */
+  background-color: rgb(241, 68, 0);
+  font-size: 15px;
+  color: rgb(255, 255, 255);
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.box2 {
+  text-align: center;
+  width: 50%;
+  padding: 30px;
+}
+.h1 {
+  text-align: center;
+  padding: 30px;
+}
+.userprofile {
+  height: 170px;
+  width: 100%;
+  padding: 10px;
+  margin: auto;
+}
+.usertable {
+  border: 1px solid red;
+}
+.usertable td,
+th {
+  margin: 0;
+  padding: 10px;
+  padding-top: 0%;
+  padding-bottom: 0%;
+
+  border: 1px solid black;
+}
+/* table {
+  overflow-y: scroll;
+} */
+.userdetails {
+  overflow-y: scroll;
+  height: 90vh;
+}
+/* .userdetails tbody {
+  scroll-behavior: auto;
+  overflow-y: scroll;
+} */
+.user {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  padding: 10px;
+}
+.user h3,
+h1 {
+  padding: 10px;
+}
+.user h4 {
+  padding: 10px;
+}
+.user p {
+  word-wrap: normal;
+  text-align: left;
+  padding: 10px;
+}
+.usertable td h1,
+h4,
+p {
+  margin: 0;
+  line-height: 1;
+  padding: 0;
+}
+.userprofile img {
+  height: 100%;
+  width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .signup-box {
+    width: 100%;
+  }
+  .box2 {
+    width: 100%;
+  }
+}
+/* For Responsiveness of the page */
+/* 
+@media screen and (max-width: 650px) {
+  .container {
+    height: 600px;
+    width: 300px;
+  }
+
+  .title {
+    font-size: 15px;
+  }
+
+  .btn {
+    height: 50px;
+    width: 200px;
+    margin: 20px auto;
+  }
+
+  .login,
+  .signup {
+    font-size: 19px;
+  }
+
+  .slider {
+    height: 50px;
+    width: 100px;
+    left: 50px;
+  }
+
+  .moveslider {
+    left: 150px;
+  }
+
+  .form-section {
+    height: 500px;
+    width: 600px;
+  }
+
+  .form-section-move {
+    left: -300px;
+  }
+
+  .login-box,
+  .signup-box {
+    height: 100%;
+    width: 300px;
+  }
+
+  .ele {
+    height: 50px;
+    width: 250px;
+    font-size: 15px;
+  }
+
+  .clkbtn {
+    height: 50px;
+    width: 130px;
+    font-size: 19px;
+  }
+}
+@media only screen and (max-width:900px) {
+    .container {
+        display: block;
+        padding: 20px 0;
+        background: transparent;
+        align-items: center;
+    }
+
+    .input-form,
+    .table {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .input-form form {
+        padding: 10px;
+        margin: 0;
+    }
+
+    .input-group .input-field {
+        font-size: 14px;
+        background: transparent;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid rgb(204, 203, 203);
+        border-radius: 0;
+    }
+
+    .line {
+        margin: 30px auto;
+        height: 2px;
+        width: 90%;
+        background: rgb(202, 0, 0);
+    }
+
+    input:focus~label,
+    input:valid~label,
+    textarea:focus~label,
+    textarea:valid~label {
+        top: -6px;
+    }
+}
+@media screen and (max-width: 320px) {
+  .container {
+    height: 600px;
+    width: 250px;
+  }
+
+  .heading {
+    font-size: 30px;
+  }
+
+  .title {
+    font-size: 10px;
+  }
+
+  .btn {
+    height: 50px;
+    width: 200px;
+    margin: 20px auto;
+  }
+
+  .login,
+  .signup {
+    font-size: 19px;
+  }
+
+  .slider {
+    height: 50px;
+    width: 100px;
+    left: 27px;
+  }
+
+  .moveslider {
+    left: 127px;
+  }
+
+  .form-section {
+    height: 500px;
+    width: 500px;
+  }
+
+  .form-section-move {
+    left: -250px;
+  }
+
+  .login-box,
+  .signup-box {
+    height: 100%;
+    width: 250px;
+  }
+
+  .ele {
+    height: 50px;
+    width: 220px;
+    font-size: 15px;
+  }
+
+  .clkbtn {
+    height: 50px;
+    width: 130px;
+    font-size: 19px;
+  }
+} */
